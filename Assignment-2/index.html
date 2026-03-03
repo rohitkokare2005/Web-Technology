@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneX India | Premium Mobile Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Phone<span>X</span>.</div>
+            <nav class="nav-links">
+                <a href="index.html" style="color:var(--accent)">Home</a>
+                <a href="smartphones.html">Smartphones</a>
+                <a href="tablets.html">Tablets</a>
+                <a href="accessories.html">Accessories</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="icon-btn">🔍</span>
+                <span class="icon-btn">🛒</span>
+                <span class="icon-btn">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Future is in <br><span class="highlight-text">Your Hands.</span></h1>
+            <p>Experience the next generation of mobile technology. The all-new Flagship Pro features the revolutionary Titan processor.</p>
+            <a href="smartphones.html" class="btn-primary">Shop Phones</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Smartphone">
+        </div>
+    </section>
+
+    <div class="brands-strip">
+        <div class="brands-container">
+            <span>Apple</span><span>Samsung</span><span>Google</span><span>OnePlus</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="categories-grid">
+        <a href="smartphones.html" class="category-card">
+            <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mobiles">
+            <div class="cat-info">Smartphones</div>
+        </a>
+        <a href="tablets.html" class="category-card">
+            <img src="https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tablets">
+            <div class="cat-info">Tablets</div>
+        </a>
+        <a href="#" class="category-card">
+            <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Watches">
+            <div class="cat-info">Smart Watches</div>
+        </a>
+        <a href="accessories.html" class="category-card">
+            <img src="https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Accessories">
+            <div class="cat-info">Accessories</div>
+        </a>
+    </div>
+
+    <h2 class="section-title">Trending Now</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <span class="badge">HOT</span>
+            <div class="p-image-container">
+                <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=400" class="p-image">
+            </div>
+            <div class="p-details">
+                <h3>iPhone 15 Pro Max</h3>
+                <p class="p-desc">Titanium, 256GB Storage</p>
+                <div class="p-footer">
+                    <span class="price">₹1,59,900</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+             <div class="p-image-container">
+                <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=400" class="p-image">
+            </div>
+            <div class="p-details">
+                <h3>AirPods Pro</h3>
+                <p class="p-desc">Active Noise Cancellation</p>
+                <div class="p-footer">
+                    <span class="price">₹24,900</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="news-content">
+                <h2>Stay in the Loop</h2>
+                <p>Get the latest drops, offers, and tech news delivered to your inbox.</p>
+            </div>
+            <form id="subscribeForm" class="news-form" novalidate>
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder="Enter your email address">
+                    <span class="error-msg" id="emailError">Please enter a valid email</span>
+                </div>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4 style="color:white; font-size:1.6rem;">Phone<span style="color:var(--accent)">X</span>.</h4>
+                <p>India's most trusted mobile store.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="smartphones.html">Phones</a>
+                <a href="tablets.html">Tablets</a>
+                <a href="accessories.html">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Warranty</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="#">support@phonex.in</a>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2024 PhoneX India Pvt Ltd.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
