@@ -1,0 +1,134 @@
+<div class="registration-wrapper">
+  <div class="registration-card">
+    <h3 class="main-header">Create Your Account</h3>
+    <p class="subtitle">Complete your profile to get started.</p>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="firstName">First Name <span class="text-danger">*</span></label>
+            <input type="text" id="firstName" formControlName="firstName">
+            <div class="error-msg" *ngIf="registrationForm.get('firstName')?.touched && registrationForm.get('firstName')?.invalid">Required.</div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="lastName">Last Name <span class="text-danger">*</span></label>
+            <input type="text" id="lastName" formControlName="lastName">
+            <div class="error-msg" *ngIf="registrationForm.get('lastName')?.touched && registrationForm.get('lastName')?.invalid">Required.</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" formControlName="dob">
+          </div>
+          
+          <div class="form-group half-width">
+            <label>Gender <span class="text-danger">*</span></label>
+            <div class="radio-group">
+              <label><input type="radio" formControlName="gender" value="male"> Male</label>
+              <label><input type="radio" formControlName="gender" value="female"> Female</label>
+              <label><input type="radio" formControlName="gender" value="other"> Other</label>
+            </div>
+            <div class="error-msg" *ngIf="registrationForm.get('gender')?.touched && registrationForm.get('gender')?.invalid">Required.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact & Address</legend>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="email">Email Address <span class="text-danger">*</span></label>
+            <input type="email" id="email" formControlName="email">
+            <div class="error-msg" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">Valid email required.</div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" formControlName="phone" placeholder="10 digits">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="street">Street Address <span class="text-danger">*</span></label>
+          <input type="text" id="street" formControlName="street">
+          <div class="error-msg" *ngIf="registrationForm.get('street')?.touched && registrationForm.get('street')?.invalid">Required.</div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="city">City <span class="text-danger">*</span></label>
+            <input type="text" id="city" formControlName="city">
+            <div class="error-msg" *ngIf="registrationForm.get('city')?.touched && registrationForm.get('city')?.invalid">Required.</div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="zipCode">Zip/Postal Code <span class="text-danger">*</span></label>
+            <input type="text" id="zipCode" formControlName="zipCode">
+            <div class="error-msg" *ngIf="registrationForm.get('zipCode')?.touched && registrationForm.get('zipCode')?.invalid">Valid zip required.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="username">Username <span class="text-danger">*</span></label>
+            <input type="text" id="username" formControlName="username">
+            <div class="error-msg" *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid">Min 4 chars required.</div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="role">Account Type <span class="text-danger">*</span></label>
+            <select id="role" formControlName="role" class="form-select">
+              <option value="" disabled selected>Select...</option>
+              <option value="customer">Customer</option>
+              <option value="seller">Seller</option>
+              <option value="admin">Admin</option>
+            </select>
+            <div class="error-msg" *ngIf="registrationForm.get('role')?.touched && registrationForm.get('role')?.invalid">Required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" formControlName="bio" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half-width">
+            <label for="password">Password <span class="text-danger">*</span></label>
+            <input type="password" id="password" formControlName="password">
+            <div class="error-msg" *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid">Min 8 chars required.</div>
+          </div>
+
+          <div class="form-group half-width">
+            <label for="confirmPassword">Confirm Password <span class="text-danger">*</span></label>
+            <input type="password" id="confirmPassword" formControlName="confirmPassword">
+            <div class="error-msg" *ngIf="registrationForm.get('confirmPassword')?.touched && registrationForm.hasError('passwordMismatch')">Passwords do not match.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-group checkbox-group">
+        <label for="terms" class="checkbox-label">
+          <input type="checkbox" id="terms" formControlName="terms">
+          I agree to the Terms and Privacy Policy <span class="text-danger">*</span>
+        </label>
+        <div class="error-msg" *ngIf="registrationForm.get('terms')?.touched && registrationForm.get('terms')?.invalid">You must accept the terms.</div>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="!registrationForm.valid">Create Account</button>
+      
+    </form>
+  </div>
+</div>
